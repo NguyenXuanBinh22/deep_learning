@@ -210,7 +210,7 @@ def train_and_eval(train_ds,
         lr=1e-3
     )
 
-    contrast_epochs = 50   # số epoch tùy bạn
+    contrast_epochs = 100   # số epoch tùy bạn
 
     print("=== START CONTRASTIVE PRETRAINING ===")
     for epoch in range(contrast_epochs):

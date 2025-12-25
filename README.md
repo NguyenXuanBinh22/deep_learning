@@ -24,7 +24,7 @@ Clone the repository or download source code files and prepare breast cancer mul
     --zscore \
     --output-dir . \
     --test-size 0.2 \
-    --top-gene 1000 --top-cpg 1000 --top-mirna 100
+    --top-gene 500 --top-cpg 500 --top-mirna 100
 ```
 Kết quả: `train_X.csv`, `test_X.csv`, `train_Y.csv`, `test_Y.csv`, `feature_counts.txt` (num_gene/num_cpg/num_mirna).
 
@@ -32,7 +32,7 @@ Kết quả: `train_X.csv`, `test_X.csv`, `train_Y.csv`, `test_Y.csv`, `feature_
 ```
 # env tùy chọn để chạy nhanh hơn
 $env:EPOCHS=50; $env:BATCH_SIZE=64;
-python moBRCA-net.py train_X.csv train_Y.csv test_X.csv test_Y.csv 500 500 100 results
+python moBRCA-net.py train_X.csv train_Y.csv test_X.csv test_Y.csv 1000 1000 200 results
 ```
 
 4) Đầu ra ở thư mục `results/`:  
