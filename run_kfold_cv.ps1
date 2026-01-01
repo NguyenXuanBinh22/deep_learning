@@ -26,10 +26,6 @@ $OUTPUT_DIR = "./kfold_output"
 $EPOCHS = 50
 $BATCH_SIZE = 64
 $LR = 1e-2
-# Số lượng features
-$TOP_GENE = 1000
-$TOP_CPG = 1000
-$TOP_MIRNA = 100
 
 # Bước 1: Chuẩn bị dữ liệu k-fold
 Write-Host "Step 1: Preparing k-fold data splits..." -ForegroundColor Cyan
@@ -40,7 +36,7 @@ try {
         --zscore `
         --output-dir $OUTPUT_DIR `
         --k-folds $K_FOLDS `
-        --top-gene $TOP_GENE --top-cpg $TOP_CPG --top-mirna $TOP_MIRNA `
+        --top-gene 1000 --top-cpg 1000 --top-mirna 100 `
         --seed 42
     
     if ($LASTEXITCODE -ne 0) {
